@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>¿Eliminar el comentario sobre la noticia?</h2>
+  <h3>{{ comment.news.title }}</h3>
+  <hr>
+  <p>{{ comment.created }}</p>
+  <p>{{ comment.text }}</p>
+  <form class="form-horizontal" method="post">
+    {% csrf_token %}
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary" >Eliminar</button>
+    </div>
+  </form>
+{% endblock content %}
